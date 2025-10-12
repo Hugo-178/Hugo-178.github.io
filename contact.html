@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Hidden Green Spots</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/showcase.jpg">
+</head>
+
+<body classs="contact-page">
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Share a Hidden Green Spot</h1>
+        <h2><em>Help others discover peaceful places in Amsterdam</em></h2>
+    </header>
+
+    <main class="contact-grid">
+        <figure class="contact-image">
+            <img src="./img/showcase.jpg" alt="Green park in Amsterdam" title="Amsterdam hidden green spot">
+            <figcaption>Discover and share your favorite peaceful place in the city.</figcaption>
+        </figure>
+
+        <section class="contact-form-area">
+            <form>
+                <fieldset>
+                    <legend>Share your green spot</legend>
+                    <lable for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                    <label for="spot">Spot name:</label>
+                    <input type="text" id="spot" name="spot" placeholder="Location  name" required>
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="5" placeholder="Describe your hidden spot..." required></textarea>
+
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hidden Green Spots | All rights reserved.</p>
+    </footer>
+    
+    <aside class="cookies-message">
+        <p>This website uses cookies to enhance your experience.</p>
+    </aside>
+
+</body>
+</html>
