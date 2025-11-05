@@ -1,14 +1,16 @@
-/*Index page*/
+/*Index page-----------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
 
 body{
     background-color:#A4C694;
-    font-family: 'Poppins', sans-serif;
+    font-family: "poppins", sans-serif;
     color:black;
     margin:0;
     padding:0;
 }
 
-nav ul{
+/* Desktop nav only */
+.desktop-menu ul {
     display:grid;
     grid-auto-flow: column; 
     justify-content: center; 
@@ -20,13 +22,12 @@ nav ul{
     gap:2em;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration:none;
     color:#fff;
     font-weight:bold;
     letter-spacing:0.1em;
     text-transform:uppercase;
-    
 }
 
 nav ul li a:hover, nav ul li a.active{
@@ -83,10 +84,7 @@ header h2{
 }
 
 .main-image figcaption{
-     text-align: center;
-    font-size: 0.9rem;
-    color: black; 
-    margin-top: 0.5rem;
+    display: none;
 }
 
 .text-box-large{
@@ -95,6 +93,7 @@ header h2{
     padding: 1.5em;
     border-radius: 10px;
     font-size: 1.2rem;
+    text-align:center;
 }
 
 .text-box-small{
@@ -129,7 +128,7 @@ header h2{
     padding: 0.5em;
 }
 
-footer {
+footer{
     text-align: center;
     background-color: #023020;
     color: white;
@@ -137,7 +136,18 @@ footer {
     margin-top: 2em;
 }
 
-/*Contact page*/
+#x{
+    display: none;
+}
+
+#x ul li:nth-child(even) {
+    background-color: #CFF;
+}
+#x ul li:nth-child(odd) {
+    background-color: #FFF;
+}
+
+/*Contact page-----------------------------------------------------------------*/
 
 .contact-grid{
     display: grid;
@@ -145,15 +155,20 @@ footer {
         "image"
         "text"
         "form";
-    gap: 1.5rem;
+    gap: 2rem;
     padding:2rem;
     max-width:800px;
-    margin: 0 auto;
+    margin: auto;   
 }
 
-.contact-image{
-    grid-area: image;
-    text-align: center;
+.contact-image{ 
+    grid-area: image; 
+}
+.contact-text{ 
+    grid-area: text; 
+}
+.contact-form-area{ 
+    grid-area: form; 
 }
 
 .contact-image img{
@@ -165,9 +180,7 @@ footer {
 }
 
 .contact-image figcaption{
-    font-style: italic;
-    color:black;
-    margin-top:0.5em;
+    display: none;
 }
 
 .contact-text{
@@ -179,16 +192,6 @@ footer {
     line-height:1.6;
     text-indent:2em;
     word-spacing:0.1em;
-}
-
-.contact-image{ 
-    grid-area: image; 
-}
-.contact-text{ 
-    grid-area: text; 
-}
-.contact-form-area{ 
-    grid-area: form; 
 }
 
 form{
@@ -205,6 +208,50 @@ legend{
     letter-spacing:0.1em;
 }
 
+input[type="text"], input[type="email"],textarea{
+    width:100%;
+    padding:0.8em;
+    margin-top:0.5em;
+    border-radius:5px;
+    border:2px sold #A4C694;
+    box-sizing: border-box;
+}
+
+label[for="email"], label[for="spot"], label[for="description"]{
+    display:block;
+    margin-top:0.8em;
+}
+
+
+input[type="submit"]{
+    background-color:#A4C694;
+    color:#023020;
+    border:none;
+    padding:0.8em 1.5em;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:1em;
+    text-transform: uppercase;
+    float: left;
+}
+
+input[type="submit"]:hover{
+    background-color:#fff;
+    color:#023020;
+}
+
+.cookies-message{
+    background-color: #023020;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    z-index: 9999;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 
 
 @media (max-width: 768px){
@@ -217,5 +264,89 @@ legend{
     .grid-container{
         padding:1rem;
     }
+    .contact-grid{
+        padding:1rem;
+    }
+    input[type="submit"]{
+        width: 100%;
+    }
 }
 
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    display: none; 
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px; 
+    right: 1.5em;
+    width: 150px; 
+    background-color: #023020;
+    border: 2px solid #A4C694; 
+    border-radius: 8px;
+    text-align: center;
+    z-index: 999; 
+    padding: 0.5em 0;
+}
+
+.mobile-menu ul {
+    display: grid;
+    grid-auto-rows: min-content; 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.mobile-menu ul li a:hover {
+    color: #A4C694;
+}
+
+
+#menu-toggle:checked ~ .mobile-menu {
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    
+    .desktop-menu { 
+        display: none; 
+    }
+    .hamburger { 
+        display: block; 
+    } 
+    header h1 { 
+        margin-top: 3em; 
+    }
+}

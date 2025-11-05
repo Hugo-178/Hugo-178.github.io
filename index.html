@@ -2,16 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Hugo" content="Hugo Berlanga Aznar">
+    <meta name="description" content="Discover hidden green spots in Amsterdam — peaceful parks and secret spaces to relax, study, or recharge.">
     <title>My Website</title>
-     <link rel="stylesheet" type="text/css" href="./css/style.css">
-     <link rel="icon" type="image/x-icon" href="./img/showcase.jpg">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/showcase.jpg">
 </head>
 <body>
     <header>
-        <nav>
+        
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <nav class="mobile-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -29,10 +46,10 @@
             <figcaption>Title image</figcaption>
         </figure>
 
-        <article class =" text-box-large">
+        <article class ="text-box-large">
             <p> 
                 Welcome to Hidden Green Spots in Amsterdam. 
-
+                <p></p>
                 This platform helps you discover peaceful and lesser-known green areas in the city —
                 perfect for relaxing, studying, or recharging away from the busy crowds
             </p>
@@ -40,8 +57,8 @@
 
         <article class="text-box-small">
             <p>
-                Why Hidden Green Spots?"
-
+                Why Hidden Green Spots?
+                <p></p>
                 Amsterdam is full of well-known parks that are often overcrowded. 
                 Hidden in neighborhoods and quiet corners, there are secret spots 
                 where you can find shade, benches, and true tranquility.
@@ -53,12 +70,20 @@
                 <a href="about.html">
                     <img src="./img/showcase.jpg" alt="Park" title="About page link">
                 </a>
-                <figcaption>Learn more about us</figcaption>
+                <figcaption>
+                    Sarphatipark Corners                
+                    <p></p>
+                    A calm corner in De Pijp with shady benches and grassy patches. Ideal for reading or relaxing after work.
+                </figcaption>
             </figure>
 
             <figure>
                 <img src="./img/showcase.jpg" alt="Park" title="Our services">
-                <figcaption>Our services</figcaption>
+                <figcaption>
+                    About
+                    <p></p>
+                    Sarphatipark Corners
+                </figcaption>
             </figure>
 
             <figure>
@@ -73,5 +98,16 @@
     <footer>
         <p> &copy; 2025 My Website. All rights reserved</p>
     </footer>
+
+    <article id="x">
+        <h2>Categories</h2>
+        <ul>
+            <li>Category 1</li>
+            <li>Category 2</li>
+            <li>Category 3</li>
+        </ul>
+    </article>
+
+
 </body>
 </html>

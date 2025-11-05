@@ -2,16 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Hugo" content="Hugo Berlanga Aznar">
+    <meta name="description" content="Share your hidden green spots in Amsterdam — help others find quiet, relaxing places in the city.">
     <title>Contact - Hidden Green Spots</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="icon" type="image/x-icon" href="./img/showcase.jpg">
 </head>
 
-<body classs="contact-page">
+<body class="contact-page">
     
     <header>
-        <nav>
+        
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <nav class="desktop-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -39,14 +55,14 @@
             <form>
                 <fieldset>
                     <legend>Share your green spot</legend>
-                    <lable for="name">Name:</label>
+                    <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="Your name" required>
 
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="Your email" required>
 
                     <label for="spot">Spot name:</label>
-                    <input type="text" id="spot" name="spot" placeholder="Location  name" required>
+                    <input type="text" id="spot" name="spot" placeholder="Location name" required>
 
                     <label for="description">Description:</label>
                     <textarea id="description" name="description" rows="5" placeholder="Describe your hidden spot..." required></textarea>
